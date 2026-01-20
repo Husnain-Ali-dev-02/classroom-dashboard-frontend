@@ -14,12 +14,13 @@ import { ThemeProvider } from "./components/refine-ui/theme/theme-provider";
 import Dashboard from "@/pages/dashboard.tsx";
 import {BookOpen, GraduationCap, Home} from "lucide-react";
 import {Layout} from "@/components/refine-ui/layout/layout.tsx";
+
 import SubjectsList from "@/pages/subjects/list.tsx";
 import SubjectsCreate from "@/pages/subjects/create.tsx";
 
-// import ClassesList from "@/pages/classes/list.tsx";
-// import ClassesCreate from "@/pages/classes/create.tsx";
-// import ClassesShow from "@/pages/classes/show.tsx";
+import ClassesList from "@/pages/classes/list.tsx";
+import ClassesCreate from "@/pages/classes/create.tsx";
+import ClassesShow from "@/pages/classes/show.tsx";
 
 import {dataProvider} from "@/providers/data.ts";
 
@@ -72,11 +73,11 @@ function App() {
                           <Route path="create" element={<SubjectsCreate />} />
                       </Route>
 
-                      {/* <Route path="classes">
+                      <Route path="classes">
                           <Route index element={<ClassesList />} />
                           <Route path="create" element={<ClassesCreate />} />
                           <Route path="show/:id" element={<ClassesShow />} />
-                      </Route> */}
+                      </Route>
                   </Route>
               </Routes>
               <Toaster />
